@@ -18,7 +18,6 @@ public class Manager {
     }
 
     public void insertMember() {
-        //scanner.nextLine();
         String id = getStrInput("Id: ");
         String pwd = getStrInput("Pwd: ");
         String name = getStrInput("Name: ");
@@ -28,8 +27,9 @@ public class Manager {
             System.out.println("ID를 입력해주세요");
         }else if(pwd.equals("")){
             System.out.println("PWD를 입력해주세요");
-        }
-        else {
+        }else if(FindById(id) != null){
+            System.out.println("중복된 ID입니다");
+        }else{
             members.add(new MemberDTO(id, pwd, name, phone));
         }
     }
@@ -37,5 +37,14 @@ public class Manager {
     private String getStrInput(String msg) {
         System.out.println(msg);
         return scanner.nextLine();
+    }
+
+    private MemberDTO FindById(String id) {
+        for(MemberDTO memberDTO : members) {
+            if(memberDTO.getId().equals(id)) {
+                return memberDTO;
+            }
+        }
+        return null;
     }
 }

@@ -7,8 +7,8 @@ public class MemberDTO {
     private String phone;
 
     // Builder
-    public MemberDTO(String id, String pwd, String name) {
-        this(id, pwd, name, "");
+    public MemberDTO(String id, String pwd) {
+        this(id, pwd, "", "");
     }
 
     public MemberDTO(String id, String pwd, String name, String phone) {
