@@ -25,7 +25,7 @@ class Period {
         //this.start = start;
         //this.end = end;
     }
-
+/*
     public Date start() {
         return start;
     }
@@ -33,8 +33,8 @@ class Period {
     public Date end() {
         return end;
     }
+*/
 
-    /*
     // solution 2
     public Date start() {
         System.out.println("Start()!!!");
@@ -45,7 +45,7 @@ class Period {
         System.out.println("End()!!!");
         return new Date(end.getTime());
     }
-    */
+
 
 }
 
